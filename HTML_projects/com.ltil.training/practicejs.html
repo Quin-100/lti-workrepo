@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/demo.js"></script>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <input type="button" onclick="fun1()" value="Click me">
+
+    <p id="empdetails"></p>
+
+    <input type="button" onclick="f2()" value="Calculate">
+    <div id="bonus"></div>
+    <br>
+    <input type="button" onclick="displayDate()" value="Date">
+    <div id="date"></div>
+    <br>
+    <input id="username" type="text" placeholder="username" onchange="displayGreet()" onfocus="changeCSS(this)" onblur="changeCSS1(this)">
+    <div id="greet"></div>
+
+    <br>
+    <label for="city">City : </label>
+    <select id="selectcity" name="city" onchange="displayCity()">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Pune">Pune</option>
+    </select><br>
+    <div id="mycity"></div><br>
+
+    <input id="password" type="text" placeholder="password" onfocus="changeCSS(this)" onblur="changeCSS1(this)">
+    <div id="greet"></div><br>
+
+    <input id="cnpassword" type="text" placeholder="confirm password" onfocus="changeCSS(this)" onblur="changeCSS1(this)">
+    <div id="greet"></div><br>
+
+    <label for="cars">We have  : </label>
+    <div id="cars" onclick="cars.forEach(displayCars)">Cars...</div><br>
+
+</body>
+<script>
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>

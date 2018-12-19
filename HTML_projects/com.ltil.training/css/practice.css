@@ -1,0 +1,39 @@
+#myDiv{
+    width: 350px;
+    height: 100px;
+    border: 5px solid blue;
+    border-radius: 50px 0px;
+}
+
+#myDiv1{        
+    width: 500px;
+    height: 300px;
+    border-right: 5px solid red;
+    border-left: 5px solid chartreuse;
+    border-bottom: 5px solid blueviolet;
+    border-top: 5px solid cadetblue;
+    margin: auto;
+    background: url(../images/photo1.jpeg);
+    
+}
+
+#myDiv1:hover p{
+    display: block;
+}
+
+#myDiv1 p{
+    display: none;
+    padding: 23px 37px;
+}
+
+p:nth-child(1){
+    color: aqua;
+}
+
+p em:nth-last-child(3){
+    color: aqua;
+}
+
+p>em:last-child{
+    font-size: 25px;
+}

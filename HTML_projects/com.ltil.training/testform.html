@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TestForm</title>    
+</head>
+
+<body>
+    <form>
+        Name:<input type="text" name="username" autofocus placeholder="Enter Name" required   autocomplete="on"/><br>
+
+        Address : <textarea name="address" placeholder="Enter Address"></textarea><br>
+
+        Telephone: <input type="tel" name="mob" pattern="[0-9]{10}" placeholder="Enter Number" title="Please enter proper mob no" required><br>
+
+        Email: <input type="email" name="email"  placeholder="Enter Email" required><br>
+
+        <canvas id="mycanvas" width="200" height="200" style="border:1px solid black">Sorry..!!</canvas>
+
+        <input type="submit" />
+    </form>
+</body>
+
+<script >
+    var can = document.getElementById("mycanvas");
+    var cont = can.getContext("2d");
+    cont.fillStyle = "rgb(255,0,0)";
+    cont.fillRect(30,30,50,50);
+</script>
+
+</html>

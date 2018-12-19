@@ -1,0 +1,83 @@
+header{    
+    /* background-color:coral;  */
+    background-image: url("../images/lti2.jpg");   
+    background-size: 100%;   
+    border: 1px solid black;
+    text-align: center;
+}
+header h1{
+    color: blue;
+}
+
+#sec1{
+    border: 2px dotted chartreuse;
+    color: blueviolet;
+    font-family:Arial;
+    font-size: 35px;
+    text-align: center;
+}
+
+div table{
+
+    margin: auto;
+    border: 3px solid seagreen;
+    border-collapse: collapse;
+}
+
+table td{
+
+    padding: 10px;
+    border: 3px solid seagreen;
+    
+}
+
+table th{
+    color: cadetblue;
+    font-size: 15px;
+    background-color: bisque;
+    padding: 5px;
+    border: 3px solid steelblue;
+    
+}
+
+body{
+    background-image: url("../images/photo2.jpg");    
+}
+
+ul li {
+    list-style: square;
+    list-style-position: outside
+}
+
+#navbar{    
+    list-style: none;
+    padding: 5px;  
+    color: white;
+}
+
+li{
+ display:inline-block;
+
+}
+
+#navbar :hover{
+   background: bisque;
+   font-size: 20px;
+   color: black;
+}
+ul div{    
+    background: red;
+    border: 1px solid black;
+    width: fit-content;
+    display: unset;
+    padding: 4px 20px;
+    font-family: monospace;
+}
+
+#btnFixed{
+    position: fixed;
+}
+
+tr :nth-child(even){
+    background-color: chartreuse;
+}

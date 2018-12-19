@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tertiary Test</title>
+    <script>
+        function calAge() {
+            var votable;
+            var age = document.getElementById("num").value;
+            votable = (age % 2 == 0) ? "Even" : "Odd";
+            //votable = (age > 18) ? "Old Enough" : "Too Young";
+            document.getElementById("vot").innerHTML = votable;
+        }
+
+        function hover(event){
+            var x = event.clientX;
+            var y = event.clientY;
+            var coords = "X coords: " + x + ", Y coords: " + y;
+            document.getElementById("hovcrd").innerHTML = coords;
+
+            /*var x = window.event.x ;
+            var y = window.event.y ;
+            var coords = "X coords: " + x + ", Y coords: " + y;
+            document.getElementById("hovcrd").innerHTML = coords;*/
+
+        }
+        function validateEmail(){
+            var str = "abc@g.com";
+            var patt1 = /[@.com]/gi;
+            var result = str.match(patt1);
+            document.getElementById("email1").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+
+    <label for="no">Enter age </label>
+    <input id="num" type="text" onchange="calAge()"><br>
+    <div id="vot"></div>
+
+
+    <div id="mouse"  style="width: 500px;height: 300px">
+        <img src="images/photo1.jpeg" onmousemove="hover(event)"/>
+        <div id="hovcrd"></div>
+    </div>
+
+    <label for="email">Email :</label>
+    <input id="email" type="text" name="email" onchange="validateEmail()"/><br>
+    <div id="email1"></div>>
+
+</body>
+
+</html>
