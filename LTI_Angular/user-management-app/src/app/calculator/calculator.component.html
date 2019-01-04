@@ -1,0 +1,37 @@
+<br>
+<br>
+
+<div class="col-md-6 col-md-offset-2">
+  <h3>Calculator</h3>
+  <br>
+  <!-- Design login form -->
+  <!-- <form [formGroup]="calcForm" (ngSubmit)="onSubmit()"> -->
+    <div class="form-group">
+      <label for="num1">Enter Number 1 </label>
+      <input type="number" class="form-control" name="num1" [(ngModel)]="num1"/>
+
+      <!-- <div *ngIf="submitted && calcForm.controls.num1.errors" class="error">
+        <div class="text-danger" *ngIf="calcForm.controls.num1.errors.required">Number 1 required..</div>
+      </div> -->
+    </div>
+
+    <div class="form-group">
+      <label for="num2">Enter Number 2</label>
+      <input type="number" class="form-control" name="num2" [(ngModel)]="num2"/>
+
+      <!-- <div *ngIf="submitted && calcForm.controls.num2.errors" class="error">
+        <div class="text-danger" *ngIf="calcForm.controls.num2.errors.required">Number 2 required..</div>
+      </div> -->
+    </div>
+
+   <div class="form-group">
+      <label for="num3">Result :</label><br>
+      <input type="number" class="form-control" name="num3" [(ngModel)]="num3"/>    
+    </div>
+
+    <button class="btn btn-success" (click)="add(num1,num2)">Add</button>&nbsp;&nbsp;
+    <button class="btn btn-danger" (click)="multiply(num1,num2)">Multiply</button>
+
+    <br><br>
+  <!-- </form> -->
+</div>

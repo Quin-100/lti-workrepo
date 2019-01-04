@@ -1,0 +1,41 @@
+<br><br>
+
+<div class="col-md-6 col-md-offset-2">
+  <h3>Edit User</h3>
+  <br>
+  <!-- Design login form -->
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" formControlName="firstName" id="firstname" />
+
+      <div *ngIf="submitted && editForm.controls.firstName.errors" class="error">
+        <div class="text-danger" *ngIf=" editForm.controls.firstName.errors.required">First Name required..</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName" id="lastname" />
+
+      <div *ngIf="submitted && editForm.controls.lastName.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.lastName.errors.required">Last Name required..</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" class="form-control" formControlName="email" id="email" />
+
+      <div *ngIf="submitted && editForm.controls.email.errors" class="error">
+        <div class="text-danger" *ngIf="editForm.controls.email.errors.required">Email required..</div>
+      </div>
+    </div>
+
+    <button class="btn btn-success">Update</button>&nbsp;&nbsp;
+    <a class="btn btn-danger" [routerLink]="['/list-user']">Cancel</a>&nbsp;&nbsp;
+    <button class="btn btn-warning" (click)="logout()" style="color:white">Logout</button>
+
+    <br><br>    
+  </form>
+</div>

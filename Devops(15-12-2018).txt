@@ -1,0 +1,82 @@
+Demo1
+	create and explore local repo
+	1.1	Create local repo
+		>cd\
+		>mkdir repos
+		>cd repos
+		>git init proj1
+		>git proj1
+		>git status					//check status of git repos
+		>explorer .
+		>git add page1.html or >git add . //add all the files of current dir.      //allow .git to start tracking the file
+		>git config --global user.email
+		>git commit or >git commit -m "[message]"    //commit with some message
+			if traped in vi editor  (->Esc->:q!)
+		>git rm --cache *.html                       //To remove a file from staging area
+		>git log            //To check history
+		>git checkout [filename]       		//To undo any changes after commited file is modified and before commiting it again
+		>git diff [commit Id 1(now)] [commit id 2(then)] [file-name]	//to compare two commits
+		>git branch			//to get branches 
+		>git branch  dev             //To create a new branch
+		>git checkout dev              //To transfer to new branch(dev branch)
+
+Demo 2
+	Try commit, roolback and difference
+	create a file page1.html 
+	save the file
+	> git add .
+	> git commit -m "First message"
+	> git log
+
+	Edit file page1.html
+	> git checkout page1.html 
+	> git add .
+	> git commit -m "update file"
+	
+	get commit history
+	> git log
+	Note down first 4 vhar of commit id.
+	> git diff <commit-1> <commit-2>
+	Note : replace <commit-1> with COMMIT-ID of first commit 
+	       replace <commit-2> with COMMIT-ID of second commit
+	> git diff <commit-1> <commit-2> page1.html
+
+Demo 3
+	1. Create a new git repo in folder "d:/repos", repo name should be "project2"
+	2. Start eclipse > create new java project > Add one java class "Test.java"
+	3. Windows menu > show view > search for "git" > open "Git Repository"
+	4. Click on "Add existing repository" > browse to location of project2 and select it
+	5. Right click on project  and "Team" > "share project" > choose existing repository from a drop down 
+
+Demo 4
+	Create new branch from current (master) branch
+	> git branch dev
+	
+	Switch to new branch
+	> git checkout dev
+
+	At this point, both branches are at same commit (same head)!!
+	Modify page1.html
+	> git add .
+	> git commit -m "update 2"
+	> git checkout master
+
+	Merge the dev branch back to master 
+	> git checkout master		//(switch to parent branch)
+	> git merge dev 		//(merge child branch)
+
+Practice : 
+	> Create single remote git repo in desktop
+	> Clone repo with github account 
+	> Team > share Project > existing repository
+	 
+
+Steps to push on Github
+Create local repo
+		>cd\
+		>mkdir repos
+		>cd repos
+		>git init proj1
+		>git commit -m "first commit"
+		>git remote add origin https://github.com/wins999/Demo.git
+		>git push -u origin master

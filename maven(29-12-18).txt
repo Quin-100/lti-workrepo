@@ -1,0 +1,94 @@
+Maven:
+	project structure
+	project Directory
+		\SRC
+			\main
+				\java			java files
+				\resources		non java files
+				\webapp
+					\WEB-INF
+						\web.xml
+			\test
+				\java			java files
+				\resources		non java files
+                                Build Artifacts
+		\target
+		pom.xml
+
+POM.XML		Project Object Model
+		Meta-Data for entire project
+		1. Project Build Targert
+		2. Project group
+		3. Project Dependencies
+		4. Plugins (if any)
+
+Maven build phases 
+	clean -	Delete everthing from \targer directory
+        compile-Compiles all java files
+	test	1.Invokes "compile"
+		2.Run all  test cases
+		3.Prepar test report.	
+
+	package 1.Invokes "compile" if compiled success go step 2
+		2.Invokes "test"    only if all test success go step 3
+		3.Create JAR or WAR
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Maven using command line
+> Create directory "maven-demos" on D: drive
+> set JAVA_HOME
+	Locate "JDK"from program files 
+	copy the path and run following cmd :
+	set JAVA_HOME={paste here}
+> set M2_HOME
+	Locate apache-maven-3.6.0 in d: drive
+	copy the path and run following cmd :
+	set M2_HOME="{paste here}"
+> set PATH
+	set PATH=%PATH%;%M2_home%\bin
+> mnv -v
+
+Once everything set, try creating new empty project
+> mvn archetype:generate -DgroupId=com.winni -DartifactId=demo1
+
+whenever promptted for i/p press ENTER
+
+> cd demo1
+> mvn package
+//or//
+> mvn clean
+//or//
+> mvn compile
+//or//
+> mvn test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

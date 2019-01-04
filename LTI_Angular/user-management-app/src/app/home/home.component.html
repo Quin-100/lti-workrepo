@@ -1,0 +1,64 @@
+<br>
+<div class="col-md-6 col-offset-2">
+  <h1>
+    Angular
+  </h1>
+  <br>
+  <h5>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nulla, in ducimus ea debitis a totam adipisci
+    architecto
+  </h5>
+  <ul class="text-success" style="font-weight: bold">
+    <li>
+      Angular Architecture
+      <ul>
+        <li>Modules</li>
+        <li>Root component or app component</li>
+        <li>Services and Dependency Injection</li>
+        <li>Directives</li>
+        <li>Pipes</li>
+        <li>Models</li>
+        <li>Routing, etc.</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<a class="text-right" [routerLink]="[ '/login']">
+  <h3>Login..</h3>
+</a>
+
+
+<a class="text-right" [routerLink]="[ '/calculator']">
+  <h3>Calculator..</h3>
+</a>
+
+<a class="text-right" [routerLink]="[ '/twoway']">
+  <h3>twoway..</h3>
+</a>
+
+<hr/>
+<div *ngIf="submitted; else status">
+    <h3 changeText></h3>
+</div>
+
+<ng-template #status>
+    <h5 class="text-right">{{ todaysDate | date:'d/M/y' }}</h5>
+
+    <h6 class="text-right">{{ todaysDate | date:'shortTime' }}</h6>
+    <h5>JSON Data</h5>
+    <b>{{ cust | json}}</b><br>
+    <b>Months : {{ months | slice:0}}</b>
+    <h4>My Salary is {{ 25000 | number:'5.2'}}</h4>
+    <h4>My Salary in percentage {{ 25| percent}}</h4>
+    <h4>Some Currency {{ 25000 | currency :"INR":true}}</h4>
+    <h2>Square Root of 9 is {{9 | sqrt}}</h2>
+    <h2>Square Root of 81 is {{81 | sqrt}}</h2>
+    <h2>Square Root of 225 is {{225 | sqrt}}</h2>
+</ng-template>
+
+<hr/>
+<a class="text-right" [routerLink]="[ '/lifecycle']">
+  <h3>lifecycle..</h3>
+</a>
+<br>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">  
+  
+<hibernate-configuration>  
+  
+<session-factory>  
+ <property name="hbm2ddl.auto">create</property>  
+ <property name="dialect">org.hibernate.dialect.OracleDialect</property>  
+ <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>  
+ <property name="connection.username">hr</property>  
+ <property name="connection.password">hr</property>  
+ <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>  
+  <property name="hibernate.current_session_context_class">thread</property> 
+  <property name="show_sql">true</property>
+   <property name="hbm2ddl.auto">create</property>  
+        
+        <mapping class="com.lti.model.Customer"></mapping>
+       
+ </session-factory>  
+  
+</hibernate-configuration>  

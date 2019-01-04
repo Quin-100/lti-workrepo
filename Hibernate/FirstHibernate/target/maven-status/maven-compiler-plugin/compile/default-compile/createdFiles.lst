@@ -1,0 +1,4 @@
+hibernate\model\Person.class
+hibernate\util\HibernateUtil.class
+hibernate\model\PersonDetail.class
+hibernate\Servlet\addPerson.class
